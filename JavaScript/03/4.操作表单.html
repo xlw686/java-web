@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作表单</title>
+
+<!--    <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>-->
+</head>
+<body>
+
+<form action="#" method="post" onsubmit="aaa()">
+    <p>
+        <span>用户名：</span> <input type="text" id="username" name="username">
+    </p>
+    <p>
+        <span>密码：</span> <input type="password" id="password" name="input-password">
+    </p>
+    <input type="hidden" id="md5-password" name="pwssword">
+    <p>
+        <!--绑定事件-->
+<!--        <button type="submit" onclick="aaa()">提交</button>-->
+        <button type="submit" >提交</button>
+    </p>
+</form>
+
+<script>
+    var input_text=document.getElementById('username');
+    input_text.value='konghuanqing@gmail.com'
+
+    function aaa(){
+        var uname=document.getElementById('username')
+        var pwd=document.getElementById('password')
+        console.log(uname.value);
+        console.log(pwd.value);
+
+        //MD5加密算法
+        pwd.value=md5(pwd.value);
+        console.log(pwd.value)
+
+        return true;
+
+    }
+</script>
+
+</body>
+</html>

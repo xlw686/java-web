@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>类继承</title>
+<!--原型链-->
+  <script>
+    class Student{
+        constructor(name) {
+            this.name=name;
+        }
+        hello(){
+            alert('hello')
+        }
+    }
+    class XiaoStudent extends Student{
+        constructor(name,grade) {
+            super(name);
+            this.grade=grade;
+        }
+    }
+    var xiaoming=new Student("xiaoming");
+    xiaoming.hello();
+
+
+  </script>
+
+</head>
+<body>
+
+
+
+
+</body>
+</html>
