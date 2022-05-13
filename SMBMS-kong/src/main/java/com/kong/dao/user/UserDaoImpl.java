@@ -1,8 +1,9 @@
 package com.kong.dao.user;
 
-import com.mysql.jdbc.StringUtils;
+
 import com.kong.dao.DruidDao;
 import com.kong.pojo.User;
+import com.mysql.cj.util.StringUtils;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

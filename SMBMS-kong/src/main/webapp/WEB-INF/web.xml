@@ -14,6 +14,7 @@
         <session-timeout>30</session-timeout>
     </session-config>
 
+<!--字符编码过滤器-->
     <filter>
         <filter-name>CharacterEncodingFilter</filter-name>
         <filter-class>com.kong.filter.CharacterEncodingFilter</filter-class>

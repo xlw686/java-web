@@ -1,7 +1,7 @@
 package com.kong.servlet.provider;
 
 import com.alibaba.fastjson.JSONArray;
-import com.mysql.jdbc.StringUtils;
+import com.mysql.cj.util.StringUtils;
 import com.kong.pojo.Provider;
 import com.kong.pojo.User;
 import com.kong.service.provider.ProviderService;

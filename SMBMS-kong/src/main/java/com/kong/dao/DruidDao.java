@@ -47,6 +47,7 @@ public class DruidDao {
      * @description:编写查询公共类
      */
     public static ResultSet execute(Connection connection, PreparedStatement preparedStatement, ResultSet resultSet, String sql, Object[] params) throws SQLException {
+        //预编译的sql，在后边直接执行就可以了
         preparedStatement = connection.prepareStatement(sql);
         for (int i = 0; i < params.length; i++) {
             //setObject()占位符是从1开始，而数组是从0开始；

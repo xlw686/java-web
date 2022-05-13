@@ -1,6 +1,6 @@
 package com.kong.dao.provider;
 
-import com.mysql.jdbc.StringUtils;
+import com.mysql.cj.util.StringUtils;
 import com.kong.dao.DruidDao;
 import com.kong.pojo.Bill;
 import com.kong.pojo.Provider;

@@ -1,7 +1,6 @@
 package com.kong.servlet.bill;
 
 import com.alibaba.fastjson.JSONArray;
-import com.mysql.jdbc.StringUtils;
 import com.kong.pojo.Bill;
 import com.kong.pojo.Provider;
 import com.kong.pojo.User;
@@ -10,6 +9,7 @@ import com.kong.service.bill.BillServiceImpl;
 import com.kong.service.provider.ProviderServiceImpl;
 import com.kong.util.Constants;
 import com.kong.util.PageSupport;
+import com.mysql.cj.util.StringUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

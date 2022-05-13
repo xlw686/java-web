@@ -1,7 +1,7 @@
 package com.kong.servlet.user;
 
 import com.alibaba.fastjson.JSONArray;
-import com.mysql.jdbc.StringUtils;
+import com.mysql.cj.util.StringUtils;
 import com.kong.pojo.Role;
 import com.kong.pojo.User;
 import com.kong.service.role.RoleServiceImpl;
