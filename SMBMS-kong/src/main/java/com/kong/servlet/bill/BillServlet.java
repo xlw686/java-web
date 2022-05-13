@@ -24,7 +24,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author ThreePure
+ * @author kongkong
  * @date 20/12/13 8:32
  * @description: 订单管理的servlet层
  * @since 1.8
@@ -161,7 +161,7 @@ public class BillServlet extends HttpServlet {
      * @description: 获取供应商列表
      * @date 20/12/15 20:10
      * @Param: [req, resp]
-     * @Return: java.util.List<com.threepure.pojo.Provider>
+     * @Return: java.util.List<com.kongkong.pojo.Provider>
      */
     private void getProviderList(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         List<Provider> providerList = null;

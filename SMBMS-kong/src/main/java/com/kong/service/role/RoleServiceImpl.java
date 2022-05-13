@@ -11,8 +11,8 @@ import java.sql.SQLException;
 import java.util.List;
 
 /**
- * @author ThreePure
- * @date 20/12/2 19:19
+ * @author kongkong
+ * @date 22/5/10 19:19
  * @description:TODO
  * @since 1.8
  */
@@ -25,9 +25,9 @@ public class RoleServiceImpl implements RoleService {
     }
 
     /**
-     * @date 20/12/2 19:24
+     * @date 22/5/10 19:24
      * @description: 获取角色列表的抽象方法
-     * @Return: java.util.List<com.threepure.pojo.Role>
+     * @Return: java.util.List<com.kongkong.pojo.Role>
      */
     @Override
     public List<Role> getRoleList() {

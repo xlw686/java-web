@@ -1,7 +1,7 @@
 package com.kong.util;
 
 /**
- * @author ThreePure
+ * @author kongkong
  * @date 20/12/1 20:24
  * @description:
  * @since 1.8

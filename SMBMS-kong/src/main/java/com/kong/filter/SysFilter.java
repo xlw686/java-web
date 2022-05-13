@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * @author ThreePure
+ * @author kongkong
  * @date 20/12/1 22:52
  * @description: 判断是否登录的过滤器
  * @since 1.8

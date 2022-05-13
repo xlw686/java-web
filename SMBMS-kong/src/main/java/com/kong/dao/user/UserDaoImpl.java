@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author ThreePure
+ * @author kongkong
  * @date 20/12/1 19:52
  * @description: 得到登录用户的实现类(业务层)
  * @since 1.8
@@ -22,9 +22,9 @@ public class UserDaoImpl implements UserDao {
 
     /**
      * @description: 判断用户是否存在
-     * @date 20/12/2 7:21
+     * @date 22/5/10 7:21
      * @Param: [connection, userCode]
-     * @Return: com.threepure.pojo.User
+     * @Return: com.kongkong.pojo.User
      */
     @Override
     public User getLoginUser(Connection connection, String userCode) {
@@ -64,7 +64,7 @@ public class UserDaoImpl implements UserDao {
 
     /**
      * @description: 修改用户密码的具体实现方法
-     * @date 20/12/2 8:21
+     * @date 22/5/10 8:21
      * @Param:[connection, id, password]
      * @Return:int
      */
@@ -85,7 +85,7 @@ public class UserDaoImpl implements UserDao {
 
     /**
      * @description: 根据用户名或者角色查询用户总数（整个项目最难理解的SQL）
-     * @date 20/12/2 16:47
+     * @date 22/5/10 16:47
      * @Param: [connection, userName, userRole]
      * @Return:int
      */
@@ -102,7 +102,7 @@ public class UserDaoImpl implements UserDao {
 
             if (!StringUtils.isNullOrEmpty(userName)) {
                 sql.append(" and u.userName like ?");
-                list.add("%" + userName + "%");
+                list.add("%" + userName + "%"); //其中%为占位符，模糊匹配 index：0
             }
             if (userRole > 0) {
                 sql.append(" and u.userRole = ?");
@@ -125,9 +125,9 @@ public class UserDaoImpl implements UserDao {
 
     /**
      * @description: 获取用户列表的接口
-     * @date 20/12/2 17:32
+     * @date 22/5/10 17:32
      * @Param: [connection, userName, userRole, currentPageNo, pageSize]
-     * @Return: java.util.List<com.threepure.pojo.User>
+     * @Return: java.util.List<com.kongkong.pojo.User>
      */
     @Override
     public List<User> getUserList(Connection connection, String userName, int userRole, int currentPageNo, int pageSize) throws Exception {
@@ -228,7 +228,7 @@ public class UserDaoImpl implements UserDao {
      * @description: 通过id获取user
      * @date 20/12/7 17:23
      * @Param: [connection, id]
-     * @Return: com.threepure.pojo.User
+     * @Return: com.kongkong.pojo.User
      */
     @Override
     public User getUserById(Connection connection, String id) throws Exception {

@@ -50,7 +50,7 @@ public class BillDaoImpl implements BillDao {
      * @description: 根据billCode判断billCode是否存在
      * @date 20/12/15 12:19
      * @Param: [connection, billCode]
-     * @Return: com.threepure.pojo.Bill
+     * @Return: com.kongkong.pojo.Bill
      */
     @Override
     public Bill existBillCode(Connection connection, String billCode) throws Exception {
@@ -132,7 +132,7 @@ public class BillDaoImpl implements BillDao {
      * @description: 通过ID获取一个订单信息
      * @date 20/12/15 15:13
      * @Param: [connection, id]
-     * @Return: com.threepure.pojo.Bill
+     * @Return: com.kongkong.pojo.Bill
      */
     @Override
     public Bill getBillById(Connection connection, String id) throws Exception {
@@ -217,7 +217,7 @@ public class BillDaoImpl implements BillDao {
      * @description: 查询订单列表
      * @date 20/12/15 15:24
      * @Param: [connection, productName, proCode, isPayment, currentPageNo, pageSize]
-     * @Return: java.util.List<com.threepure.pojo.Bill>
+     * @Return: java.util.List<com.kongkong.pojo.Bill>
      */
     @Override
     public List<Bill> getBillList(Connection connection, String productName, int providerId, int isPayment, int currentPageNo, int pageSize) throws Exception {

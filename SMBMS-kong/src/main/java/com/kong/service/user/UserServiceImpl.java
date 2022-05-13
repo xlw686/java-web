@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 /**
- * @author ThreePure
+ * @author kongkong
  * @date 20/12/1 20:12
  * @description: 判断用户登录
  * @since 1.8
@@ -28,9 +28,9 @@ public class UserServiceImpl implements UserService {
 
     /**
      * @description: 实现用户登录
-     * @date 20/12/2 8:36
+     * @date 22/5/10 8:36
      * @Param: [userCode, password]
-     * @Return: com.threepure.pojo.User
+     * @Return: com.kongkong.pojo.User
      */
     @Override
     public User login(String userCode, String password) {
@@ -40,6 +40,7 @@ public class UserServiceImpl implements UserService {
         try {
 //            System.out.println("UserServiceImpl:"+userCode);
 //            System.out.println("UserServiceImpl:"+password);
+            //通过业务层调用对应的数据库操作
             connection = DruidDao.getConnection();
             user = userDao.getLoginUser(connection, userCode);
         } catch (SQLException throwables) {
@@ -59,7 +60,7 @@ public class UserServiceImpl implements UserService {
 
     /**
      * @description: 实现用户修改密码
-     * @date 20/12/2 8:38
+     * @date 22/5/10 8:38
      * @Param: [id, pwd]
      * @Return: int
      */
@@ -85,7 +86,7 @@ public class UserServiceImpl implements UserService {
      * @param userName
      * @param userRole
      * @description: 查询用户记录数
-     * @date 20/12/2 17:12
+     * @date 22/5/10 17:12
      * @Param: [userName, userRole]
      * @Return: int
      */
@@ -106,9 +107,9 @@ public class UserServiceImpl implements UserService {
 
     /**
      * @description: 根据条件查询用户列表
-     * @date 20/12/2 17:58
+     * @date 22/5/10 17:58
      * @Param: [queryUserName, queryUserRole, currentPageNo, pageSize]
-     * @Return: java.util.List<com.threepure.pojo.User>
+     * @Return: java.util.List<com.kongkong.pojo.User>
      */
     @Override
     public List<User> getUserList(String queryUserName, int queryUserRole, int currentPageNo, int pageSize) {
@@ -164,7 +165,7 @@ public class UserServiceImpl implements UserService {
      * @description: 根据UserCode查询用户
      * @date 20/12/7 18:03
      * @Param: [userCode]
-     * @Return: com.threepure.pojo.User
+     * @Return: com.kongkong.pojo.User
      */
     @Override
     public User selectUserCodeExist(String userCode) {
@@ -211,7 +212,7 @@ public class UserServiceImpl implements UserService {
      * @description: 根据id查找User
      * @date 20/12/7 18:04
      * @Param: [id]
-     * @Return: com.threepure.pojo.User
+     * @Return: com.kongkong.pojo.User
      */
     @Override
     public User getUserById(String id) {

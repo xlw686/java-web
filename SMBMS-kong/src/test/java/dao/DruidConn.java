@@ -5,7 +5,7 @@ import com.kong.dao.DruidDao;
 import java.sql.SQLException;
 
 /**
- * @author ThreePure
+ * @author kongkong
  * @date 20/11/30 14:48
  * @description:TODO
  * @since 1.8

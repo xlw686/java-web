@@ -11,7 +11,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 /**
- * @author ThreePure
+ * @author kongkong
  * @date 20/12/13 8:29
  * @description: 供应商管理服务层实现类
  * @since 1.8
@@ -145,7 +145,7 @@ public class ProviderServiceImpl implements ProviderService {
      * @description: 根据proCode查询供应商
      * @date 20/12/13 9:51
      * @Param: [proCode]
-     * @Return: com.threepure.pojo.User
+     * @Return: com.kongkong.pojo.User
      */
     @Override
     public Provider providerCodeExist(String proCode) {
@@ -168,7 +168,7 @@ public class ProviderServiceImpl implements ProviderService {
      * @description: 根据id获取一个供应商的信息
      * @date 20/12/13 9:51
      * @Param: [id]
-     * @Return: com.threepure.pojo.Provider
+     * @Return: com.kongkong.pojo.Provider
      */
     @Override
     public Provider getProviderById(String id) {
@@ -217,7 +217,7 @@ public class ProviderServiceImpl implements ProviderService {
      * @description: 根据条件查询供应商列表
      * @date 20/12/13 9:55
      * @Param: [queryProName, queryProRole, currentPageNo, pageSize]
-     * @Return: java.util.List<com.threepure.pojo.Provider>
+     * @Return: java.util.List<com.kongkong.pojo.Provider>
      */
     @Override
     public List<Provider> getProviderList(String queryProName, String queryProCode, int currentPageNo, int pageSize) {

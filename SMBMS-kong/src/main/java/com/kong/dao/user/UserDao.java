@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 /**
- * @author ThreePure
+ * @author kongkong
  * @date 20/12/1 19:47
  * @description: 用户接口
  * @since 1.8
@@ -18,13 +18,13 @@ public interface UserDao {
      * @description: 得到登录的用户的接口
      * @date 20/12/1 19:49
      * @Param: [connection, userCode]
-     * @Return:com.threepure.pojo.User
+     * @Return:com.kongkong.pojo.User
      */
     User getLoginUser(Connection connection, String userCode) throws SQLException;
 
     /**
      * @description: 修改密码的接口
-     * @date 20/12/2 8:13
+     * @date 22/5/10 8:13
      * @Param: [connection, id, password]
      * @Return: int
      */
@@ -32,7 +32,7 @@ public interface UserDao {
 
     /**
      * @description: 查询用户数量
-     * @date 20/12/2 16:45
+     * @date 22/5/10 16:45
      * @Param: [connection, userName, userRole]
      * @Return: int
      */
@@ -40,9 +40,9 @@ public interface UserDao {
 
     /**
      * @description: 获取用户列表的接口
-     * @date 20/12/2 17:32
+     * @date 22/5/10 17:32
      * @Param: [connection, userName, userRole, currentPageNo, pageSize]
-     * @Return: java.util.List<com.threepure.pojo.User>
+     * @Return: java.util.List<com.kongkong.pojo.User>
      */
     List<User> getUserList(Connection connection, String userName, int userRole, int currentPageNo, int pageSize) throws Exception;
 
@@ -66,7 +66,7 @@ public interface UserDao {
      * @description: 通过id获取user
      * @date 20/12/7 17:23
      * @Param: [connection, id]
-     * @Return: com.threepure.pojo.User
+     * @Return: com.kongkong.pojo.User
      */
     public User getUserById(Connection connection, String id) throws Exception;
 

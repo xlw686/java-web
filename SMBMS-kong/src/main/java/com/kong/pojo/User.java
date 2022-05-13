@@ -3,7 +3,7 @@ package com.kong.pojo;
 import java.util.Date;
 
 /**
- * @author ThreePure
+ * @author kongkong
  * @date 20/11/30 9:12
  * @description: ORM映射（表-->实体类）  对应数据库user表的实体类
  * @since 1.8

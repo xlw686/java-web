@@ -24,8 +24,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author ThreePure
- * @date 20/12/2 8:49
+ * @author kongkong
+ * @date 22/5/10 8:49
  * @description:
  * @since 1.8
  * 实现Servlet复用,提取出方法，然后再通过路径匹配
@@ -64,7 +64,7 @@ public class UserServlet extends HttpServlet {
 
     /**
      * @description: 修改密码
-     * @date 20/12/2 9:55
+     * @date 22/5/10 9:55
      * @Param: [req, resp]
      * @Return: void
      */
@@ -98,13 +98,13 @@ public class UserServlet extends HttpServlet {
 
     /**
      * @description: 验证旧密码, Session中有用户的密码
-     * @date 20/12/2 10:57
+     * @date 22/5/10 10:57
      * @Param: [req, resp]
      * @Return: void
      */
     private void pwdmodify(HttpServletRequest req, HttpServletResponse resp) {
         Object o = req.getSession().getAttribute(Constants.USER_SESSION);
-        String oldpassword = req.getParameter("oldpassword");
+        String oldpassword = req.getParameter("oldpassword");//用户输入的旧密码
 
         //万能的Map：结果集
         Map<String, String> resultMap = new HashMap<String, String>();
@@ -145,7 +145,7 @@ public class UserServlet extends HttpServlet {
 
     /**
      * @description: 对用户进行查询【重点和难点】
-     * @date 20/12/2 19:42
+     * @date 22/5/10 19:42
      * @Param: [req, resp]
      * @Return: void
      * 1.获取用户前端的数据（查询）

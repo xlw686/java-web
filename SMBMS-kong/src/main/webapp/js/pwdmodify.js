@@ -19,7 +19,7 @@ $(function(){
 			url:path+"/jsp/user.do",
 			data:{method:"pwdmodify",oldpassword:oldpassword.val()},
 			dataType:"json",
-			success:function(data){
+			success:function(data){//ajax请求成功时，data为请求返回参数
 				if(data.result == "true"){//旧密码正确
 					validateTip(oldpassword.next(),{"color":"green"},imgYes,true);
 				}else if(data.result == "false"){//旧密码输入不正确

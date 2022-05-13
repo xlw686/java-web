@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 /**
- * @author ThreePure
+ * @author kongkong
  * @date 20/12/13 8:26
  * @description: 订单的数据库操作接口
  * @since 1.8
@@ -26,7 +26,7 @@ public interface BillDao {
      * @description: 根据billCode判断billCode是否存在
      * @date 20/12/15 12:19
      * @Param: [connection, billCode]
-     * @Return: com.threepure.pojo.Bill
+     * @Return: com.kongkong.pojo.Bill
      */
     Bill existBillCode(Connection connection, String billCode) throws Exception;
 
@@ -50,7 +50,7 @@ public interface BillDao {
      * @description: 通过获取一个订单信息
      * @date 20/12/15 15:13
      * @Param: [connection, id]
-     * @Return: com.threepure.pojo.Bill
+     * @Return: com.kongkong.pojo.Bill
      */
     Bill getBillById(Connection connection, String id) throws Exception;
 
@@ -66,7 +66,7 @@ public interface BillDao {
      * @description: 查询订单列表
      * @date 20/12/15 15:24
      * @Param: [connection, productName, providerId, isPayment, currentPageNo, pageSize]
-     * @Return: java.util.List<com.threepure.pojo.Bill>
+     * @Return: java.util.List<com.kongkong.pojo.Bill>
      */
     List<Bill> getBillList(Connection connection, String productName, int providerId, int isPayment, int currentPageNo, int pageSize) throws Exception;
 

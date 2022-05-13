@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 /**
- * @author ThreePure
+ * @author kongkong
  * @date 20/12/13 8:24
  * @description: 供应商的数据库操作接口
  * @since 1.8
@@ -27,7 +27,7 @@ public interface ProviderDao {
      * @description: 判断供应商编码是否存在
      * @date 20/12/15 8:56
      * @Param: [connection, provider]
-     * @Return: com.threepure.pojo.Provider
+     * @Return: com.kongkong.pojo.Provider
      */
     public Provider existProCode(Connection connection, String proCode) throws Exception;
 
@@ -35,7 +35,7 @@ public interface ProviderDao {
      * @description: 询目标供应商下的未支付订单数
      * @date 20/12/15 11:02
      * @Param: [connection, providerId]
-     * @Return: java.util.List<com.threepure.pojo.Bill>
+     * @Return: java.util.List<com.kongkong.pojo.Bill>
      */
     List<Bill> noPayBill(Connection connection, int providerId) throws Exception;
 
@@ -59,7 +59,7 @@ public interface ProviderDao {
      * @description:获取一个供应商信息
      * @date 20/12/13 8:45
      * @Param: [connection, id]
-     * @Return: com.threepure.pojo.Provider
+     * @Return: com.kongkong.pojo.Provider
      */
     public Provider getProviderById(Connection connection, String id) throws Exception;
 
@@ -75,7 +75,7 @@ public interface ProviderDao {
      * @description:获取供应商列表，满足模糊查询
      * @date 20/12/13 8:52
      * @Param: [connection, proName, proCode, currentPageNo, pageSize]
-     * @Return: java.util.List<com.threepure.pojo.Provider>
+     * @Return: java.util.List<com.kongkong.pojo.Provider>
      */
     List<Provider> getProviderList(Connection connection, String proName, String proCode, int currentPageNo, int pageSize) throws Exception;
 

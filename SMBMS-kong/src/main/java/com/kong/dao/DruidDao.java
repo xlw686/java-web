@@ -9,7 +9,7 @@ import java.sql.*;
 import java.util.Properties;
 
 /**
- * @author ThreePure
+ * @author kongkong
  * @date 20/11/30 9:25
  * @description: 数据库操作（持久层）
  * @since 1.8
@@ -20,9 +20,13 @@ public class DruidDao {
     //静态代码块，类加载时就完成了初始化
     static {
         try {
+            // 将配置文件转换成字节输入流
             InputStream in = DruidDao.class.getClassLoader().getResourceAsStream("druid.properties");
+            // 创建Properties对象
             Properties properties = new Properties();
+            // 使用properties对象加载is
             properties.load(in);
+            //druid底层是使用的工厂设计模式，去加载配置文件，创建DruidDataSource对
             dataSource = DruidDataSourceFactory.createDataSource(properties);
         } catch (Exception e) {
             e.printStackTrace();

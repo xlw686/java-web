@@ -109,7 +109,7 @@ public class BillServiceImpl implements BillService {
      * @description: 通过billCode查询订单，可以用于添加订单时判断billCode是否可用
      * @date 20/12/15 15:34
      * @Param: [billCode]
-     * @Return: com.threepure.pojo.Bill
+     * @Return: com.kongkong.pojo.Bill
      */
     @Override
     public Bill billCodeExist(String billCode) {
@@ -131,7 +131,7 @@ public class BillServiceImpl implements BillService {
      * @description: 通过id查询一订单信息
      * @date 20/12/15 15:36
      * @Param: [id]
-     * @Return: com.threepure.pojo.Bill
+     * @Return: com.kongkong.pojo.Bill
      */
     @Override
     public Bill getBillById(String id) {
@@ -182,7 +182,7 @@ public class BillServiceImpl implements BillService {
      * @description: 查询的订单列表
      * @date 20/12/15 15:39
      * @Param: [connection, productName, proCode, isPayment, currentPageNo, pageSize]
-     * @Return: java.util.List<com.threepure.pojo.Bill>
+     * @Return: java.util.List<com.kongkong.pojo.Bill>
      */
     @Override
     public List<Bill> getBillList(String productName, int providerId, int isPayment, int currentPageNo, int pageSize) {

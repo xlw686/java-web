@@ -5,6 +5,8 @@
                       http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0"
          metadata-complete="true">
+
+<!--设置欢迎页面-首页-->
     <welcome-file-list>
         <welcome-file>login.jsp</welcome-file>
     </welcome-file-list>
@@ -23,7 +25,7 @@
         <filter-name>CharacterEncodingFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
-
+<!--用户登录的过滤器-->
     <filter>
         <filter-name>SysFilter</filter-name>
         <filter-class>com.kong.filter.SysFilter</filter-class>
